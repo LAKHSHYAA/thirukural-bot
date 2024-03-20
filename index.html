@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thirukkural Chatbot</title>
+</head>
+<body>
+    <h1>Thirukkural Chatbot</h1>
+    <form method="post">
+        <label for="couplet">Enter Thirukkural Couple:</label><br>
+        <textarea id="couplet" name="couplet" rows="4" cols="50"></textarea><br><br>
+        <input type="submit" value="Translate to Voice">
+    </form>
+    {% if audio_url %}
+    <audio controls>
+        <source src="{{ audio_url }}" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    {% endif %}
+</body>
+</html>
